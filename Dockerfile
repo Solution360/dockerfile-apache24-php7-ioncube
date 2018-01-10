@@ -5,7 +5,7 @@ RUN apt-get install -y wget curl apt-transport-https apache2 unzip
 
 RUN apt-get update
 
-RUN apt-get install -y php7.0 php7.0-curl php7.0-gd php7.0-mbstring php7.0-imagick php7.0-mysql php7.0-xdebug php7.0-simplexml php7.0-zip php7.0-apcu php-apcu-bc
+RUN apt-get install -y php7.0 php7.0-curl php7.0-gd php7.0-mbstring php7.0-imagick php7.0-mysql php7.0-xdebug php7.0-simplexml php7.0-zip php7.0-soap php7.0-apcu php-apcu-bc
 
 #configure apache
 RUN ["bin/bash", "-c", "sed -i 's/AllowOverride None/AllowOverride All\\nSetEnvIf X-Forwarded-Proto https HTTPS=on/g' /etc/apache2/apache2.conf"]
